@@ -23,4 +23,5 @@ id number detector:    there are two nodes
                 * face detection Pan and Tilt servo control
                   
  which where used before creating the ros nodes (in Pycharm IDE) 
+ and the codes that where checked out in the raspberry pi ....
 
