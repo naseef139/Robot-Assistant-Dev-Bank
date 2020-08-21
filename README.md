@@ -1,27 +1,30 @@
-# Robot-Assistant-Dev-Bank
+# Setup Guide
+Zero step:
+Before you will have to enable ssh inside RASPberry pi and other basic systems, so 
+connect dirrectly to a monitos and keyboard and execute the script in this repo called:
+***pan_and_tilt_setup/ubuntumate_raspberrypi_setup.sh***
 
+First get inside your RaspBerry Pi through ssh or RDP.
+```bash
+ssh user_name@IP_DEVICE
+```
 
-face detector :        there are three ros nodes 
-                       1. camera node
-                       2. face detector node
-                       3. coordinate receiver node
+Then you install git to be able to download this repo
+```bash
+sudo apt install git
+```
 
+Once done, download this repo:
+```bash 
+git clone https://bitbucket.org/theconstructcore/pan_and_tilt_morpheus_chair.git
+```
 
-id number detector:    there are two nodes 
-                       1. id number publisher node
-                       2. id number subscriber node
+Then execute the following commands to install ROS and enable SMBUS for the Pan and Tilt Hast for RAspberry PI
+```bash
+./roskinetic_install.sh
+```
+And follow the instructions in the script ***setup_ic2_for_smbus.sh***
 
+Now you should be able to execute everything related to the Pan and Tilt. For the Camera setup keep on reading:
 
-
-
-
-### And i also attached the cascade classifiers for the faces and eyes
-
- And there are opencv python codes for
-                * the face detection and
-                * id card number detection
-                * face detection Pan and Tilt servo control
-                  
- which where used before creating the ros nodes (in Pycharm IDE) 
- and the codes that where checked out in the raspberry pi ....
-
+***PENDING***
