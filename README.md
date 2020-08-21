@@ -1,30 +1,35 @@
-# Setup Guide
-Zero step:
-Before you will have to enable ssh inside RASPberry pi and other basic systems, so 
-connect dirrectly to a monitos and keyboard and execute the script in this repo called:
-***pan_and_tilt_setup/ubuntumate_raspberrypi_setup.sh***
+ros_controllers
+===============
 
-First get inside your RaspBerry Pi through ssh or RDP.
-```bash
-ssh user_name@IP_DEVICE
+See [ros_control](http://wiki.ros.org/ros_control) and [ros_controllers](http://wiki.ros.org/ros_controllers) documentation on ros.org
+
+### Build Status
+
+Indigo | Kinetic | Lunar | Melodic
+------ | ------ | ------ | ------
+[![Build Status](https://travis-ci.org/ros-controls/ros_controllers.png?branch=indigo-devel)](https://travis-ci.org/ros-controls/ros_controllers) | [![Build Status](https://travis-ci.org/ros-controls/ros_controllers.png?branch=kinetic-devel)](https://travis-ci.org/ros-controls/ros_controllers) | [![Build Status](https://travis-ci.org/ros-controls/ros_controllers.png?branch=kinetic-devel)](https://travis-ci.org/ros-controls/ros_controllers) | [![Build Status](https://travis-ci.org/ros-controls/ros_controllers.png?branch=melodic-devel)](https://travis-ci.org/ros-controls/ros_controllers)
+
+### Branches for source-based installation
+
+ROS Indigo  | ROS Kinetic | ROS Lunar | ROS Melodic
+--- | ------------- | ------------- | -------------
+indigo-devel  | kinetic-devel  | kinetic-devel | melodic-devel
+
+## Publication
+
+If you find this work useful please give credits to the authors by citing:
+
+* S. Chitta, E. Marder-Eppstein, W. Meeussen, V. Pradeep, A. Rodríguez Tsouroukdissian, J. Bohren, D. Coleman, B. Magyar, G. Raiola, M. Lüdtke and E. Fernandez Perdomo
+**"ros_control: A generic and simple control framework for ROS"**,
+The Journal of Open Source Software, 2017. ([PDF](http://www.theoj.org/joss-papers/joss.00456/10.21105.joss.00456.pdf))
+
 ```
-
-Then you install git to be able to download this repo
-```bash
-sudo apt install git
+@article{ros_control,
+author = {Chitta, Sachin and Marder-Eppstein, Eitan and Meeussen, Wim and Pradeep, Vijay and Rodr{\'i}guez Tsouroukdissian, Adolfo  and Bohren, Jonathan and Coleman, David and Magyar, Bence and Raiola, Gennaro and L{\"u}dtke, Mathias and Fern{\'a}ndez Perdomo, Enrique},
+title = {ros\_control: A generic and simple control framework for ROS},
+journal = {The Journal of Open Source Software},
+year = {2017},
+doi = {10.21105/joss.00456},
+URL = {http://www.theoj.org/joss-papers/joss.00456/10.21105.joss.00456.pdf}
+}
 ```
-
-Once done, download this repo:
-```bash 
-git clone https://bitbucket.org/theconstructcore/pan_and_tilt_morpheus_chair.git
-```
-
-Then execute the following commands to install ROS and enable SMBUS for the Pan and Tilt Hast for RAspberry PI
-```bash
-./roskinetic_install.sh
-```
-And follow the instructions in the script ***setup_ic2_for_smbus.sh***
-
-Now you should be able to execute everything related to the Pan and Tilt. For the Camera setup keep on reading:
-
-***PENDING***
