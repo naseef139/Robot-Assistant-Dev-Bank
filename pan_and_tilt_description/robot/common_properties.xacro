@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="common_properties">
+    
+    <xacro:property name="face_size_x" value="0.0679" />
+    <xacro:property name="face_size_y" value="0.0541" />
+    <xacro:property name="face_size_z" value="0.0818" />
+    <xacro:property name="face_mass" value="0.1" />
+
+    
+    <xacro:property name="maincamera_size_long" value="0.12" />
+    <xacro:property name="maincamera_size_short" value="0.01" />
+    <xacro:property name="maincamera_mass" value="0.001" />
+    <xacro:property name="maincamera_x_distance" value="0.08" />
+    <xacro:property name="maincamera_z_distance" value="0.174219" />
+    
+    <xacro:property name="joints_long" value="0.01" />
+    <xacro:property name="joints_short" value="0.02" />
+    <xacro:property name="joints_mass" value="0.1" />
+    <xacro:property name="joint_yaw_max_speed" value="1.0" />
+    <xacro:property name="joint_yaw_max_effort" value="1.0" />
+    <xacro:property name="joint_pitch_max_speed" value="0.1" />
+    <xacro:property name="joint_pitch_effort" value="0.1" />
+
+    <xacro:property name="base_long" value="0.01" />
+    <xacro:property name="base_short" value="0.02" />
+    <xacro:property name="base_mass" value="0.001" />
+
+    
+    <link name="world"/>
+    
+    <gazebo>
+        <plugin name="gazebo_ros_control" 
+                filename="libgazebo_ros_control.so">
+            <robotNamespace>/pan_and_tilt</robotNamespace>
+            <robotParam>/pan_and_tilt_robot_description</robotParam>
+            <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+            <legacyModeNS>true</legacyModeNS>
+        </plugin>
+    </gazebo>
+    
+</robot>
+
